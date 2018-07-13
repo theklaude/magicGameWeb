@@ -31,7 +31,7 @@
                         </div>
                         <div class="td" style="align-items: flex-end;">
                             <a href="<c:url value="/rejoindre"/>?idPartie=${partie.id}">
-                                <button class="btn btn-primary">Rejoindre</button>
+                                <button class="btn blue-gradient btn-rounded waves-effect waves-light">Rejoindre</button>
                             </a>
                         </div>
                     </div>
