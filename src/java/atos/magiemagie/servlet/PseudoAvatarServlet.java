@@ -5,7 +5,9 @@
  */
 package atos.magiemagie.servlet;
 
+import atos.magiemagie.service.JoueurService;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,12 +18,21 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author theklaude
  */
-@WebServlet(name = "HomeServlet", urlPatterns = {"/home"})
-public class HomeServlet extends HttpServlet {
+@WebServlet(name = "RejoindrePartieServlet", urlPatterns = {"/rejoindre-partie"})
+public class PseudoAvatarServlet extends HttpServlet {
 
-     @Override
+private  JoueurService service= new JoueurService();
+
+@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("home.jsp").forward(req, resp);
+        req.getRequestDispatcher("pseudo-avatar.jsp").forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        
+    }
+    
 
 }

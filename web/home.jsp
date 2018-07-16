@@ -15,38 +15,25 @@
     </head>
 
 
-    <body>
+    <body class="container">
 
         <c:import url="/Template/_HEADER.jsp"/>
 
-        <div class="row">
-            <div class="col-xs-6 col-md-4"></div>
-            <div class="col-xs-6 col-md-4">
-                <h3>Liste des parties</h3>
 
-                <c:forEach items="${listeParties}" var="partie">
-                    <div class="tr">
-                        <div class="td" style="flex-grow: 2;">
-                            <span>${partie.nom}</span>
-                        </div>
-                        <div class="td" style="align-items: flex-end;">
-                            <a href="<c:url value="/rejoindre"/>?idPartie=${partie.id}">
-                                <button class="btn blue-gradient btn-rounded waves-effect waves-light">Rejoindre</button>
-                            </a>
-                        </div>
+                <div class="jumbotron text-center" >
+                    <h3 class="display-5">Welcome to the Magic Game!</h3>
+                    <br>
+                    <br>
+                    <div class="btn-group">
+                        <a class="btn btn-primary btn-lg" href="<c:url value="/creer-partie"/>?" role="button">Créer une partie</a>
                     </div>
-                </c:forEach>
 
-                
-                </form>
-
-
-            </div>
-            <div class="col-xs-6 col-md-4"></div>
-        </div>
- 
-
-
+                    <div class="btn-group">
+                        <a class="btn btn-primary btn-lg" href="<c:url value="/lister-partie"/>?" role="button">Rejoindre une partie</a>
+                    </div>
+                </div>
+            
+                     
 
         <c:import url="/Template/_FOOTER.jsp"/>
         <c:import url="/Template/_JAVASCRIPTS.jsp"/>

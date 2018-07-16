@@ -4,7 +4,7 @@ h1 {
     position: left;
     color: #FDFCFC;
     font-family: 'Eater', cursive;
-    font-size: 33px;
+    font-size: 63px;
     text-align: left;
 }
 h2 {
@@ -23,41 +23,16 @@ header, main, footer {
     margin: 0 auto;
     width: 800px;
 }
-.container {
-    margin-left: 25%;
-    margin-right: 25%;
-    text-align: center;
-    height: auto;
-    width: auto;
-    border-radius: 6px;
-    border: 2px solid rgba(91, 107, 132,0.25);
-    background-color: rgba(91, 107, 132,0.25);
-}
+
 div.ligne {
     text-align: center;
 }
 .button {
     display: inline-block;
-   }
-
-
-
-
-
-.case1 {
-    text-align: left;
-    display: inline-block;
-    width: 30%;
 }
-.case2 {
-    text-align: left;
-    display: inline-block;
-    width: 30%;
+
+.card{
+   display: inline-block;
 }
-.case3 {
-    display: inline-block;
-    width: 30%;
-}
-div.imagebox {
-    text-align: center;
-}
+
+
