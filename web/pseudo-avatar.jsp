@@ -38,28 +38,32 @@
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <img src="http://placehold.it/350x350" class="img-responsive" alt="a" />
+                                    <img src="<c:url value="/CSS/img/avatar1.png"/>" class="img-responsive" alt="a" />
+                                    <input type="radio" name="avatar" value="avatar1">
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <img src="http://placehold.it/350x350" class="img-responsive" alt="a" />
+                                    <img src="<c:url value="/CSS/img/avatar2.png"/>" class="img-responsive" alt="a" />
+                                    <input type="radio" name="avatar" value="avatar2">
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                    <img src="http://placehold.it/350x350" class="img-responsive" alt="a" />
+                                    <img src="<c:url value="/CSS/img/avatar3.png"/>" class="img-responsive" alt="a" />
+                                    <input type="radio" name="avatar" value="avatar3">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3" >
                             <div class="col-item">
                                 <div class="photo">
-                                    <img src="http://placehold.it/350x350" class="img-responsive" alt="a" />
+                                    <img src="<c:url value="/CSS/img/avatar4.png"/>" class="img-responsive" alt="a" />
+                                    <input type="radio" name="avatar" value="avatar4">
                                 </div>
                             </div>
                         </div>

@@ -18,19 +18,21 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author theklaude
  */
-@WebServlet(name = "RejoindrePartieServlet", urlPatterns = {"/rejoindre-partie"})
+@WebServlet(name = "RejoindrePartieServlet", urlPatterns = {"/pseudo-avatar"})
 public class PseudoAvatarServlet extends HttpServlet {
 
 private  JoueurService service= new JoueurService();
 
 @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getSession().setAttribute("partieId", Long.parseLong(req.getParameter("idPartie")));
         req.getRequestDispatcher("pseudo-avatar.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
+        service.rejoindrePartie(req.getParameter("pseudo"), req.getParameter("avatar"), (long) req.getSession().getAttribute("partieId"));
+        resp.sendRedirect("ecran-jeu.jsp");
         
     }
     
