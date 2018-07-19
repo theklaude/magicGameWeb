@@ -19,6 +19,7 @@
 
         <c:import url="/Template/_HEADER.jsp"/>
 
+        
         <div class="jumbotron  text-center">
 
             <div class="row">
