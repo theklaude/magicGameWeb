@@ -27,16 +27,10 @@ public class ListerPartieServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //recuperer la liste des categories en DB
         List<Partie> parties = service.listerPartieNonDemarees();
-        
- 
         req.setAttribute("listeParties", parties);
-
-        //Forward vers une 
+ 
         req.getRequestDispatcher("lister-partie.jsp").forward(req, resp);
-        
-        
         
     }
     

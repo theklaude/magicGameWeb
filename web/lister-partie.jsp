@@ -20,7 +20,7 @@
         <c:import url="/Template/_HEADER.jsp"/>
 
 
-        <div class="jumbotron  text-center"">
+        <div class="jumbotron  text-center">
             <h3 class="display-5">Liste des parties</h3>
             <br>
             <br>
@@ -29,6 +29,7 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Nombre de joueurs</th>
                         <th scope="col"> </th>
                     </tr>
                 </thead>
@@ -39,6 +40,7 @@
 
                             <td>${partie.id}</td>
                             <td>${partie.nom}</td>
+                            <td>${partie.joueurs.size()}</td>
                             <td><a href="<c:url value="/pseudo-avatar"/>?idPartie=${partie.id}">
                                     <button class="btn btn-primary">Rejoindre partie</button>
                                 </a></td>

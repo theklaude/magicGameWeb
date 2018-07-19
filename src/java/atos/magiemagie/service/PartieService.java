@@ -188,9 +188,7 @@ public class PartieService {
     }
 
     public Partie recherchePartieParId(long Id) {
-        Partie p = new Partie();
-        pdao.recherchePartieId(Id);
-        return p;
+        return pdao.recherchePartieId(Id);
     }
 
     public Partie creerNouvellePartie(String nom) {
@@ -208,5 +206,7 @@ public class PartieService {
     public Joueur rechercherJoueurQuiALaMain(long partieId) {
         return pdao.rechercherJoueurQuiALaMain(partieId);
     }
+    
+     
 
 }

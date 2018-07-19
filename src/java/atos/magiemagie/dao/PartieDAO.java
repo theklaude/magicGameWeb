@@ -107,5 +107,21 @@ public class PartieDAO {
             return null;
         }
     }
+    public long nbreJoueur(long partieId) {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+
+        Query query = em.createQuery(""
+                + "SELECT MAX(j.ordre)+1 "
+                + "FROM Joueur j "
+                + "JOIN j.partie p "
+                + "WHERE p.id=:idPartie ");
+        query.setParameter("idPartie", partieId);
+
+        Object nbre = query.getSingleResult();
+
+        return (Integer) nbre;
+    }
+    
+   
 
 }
